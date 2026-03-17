@@ -73,10 +73,10 @@ public class Retriever {
 			return nomatim.openStream();
 		}
 		catch (MalformedURLException e) {
-			System.out.println("ERROR: Bad URL, could not access Nomatim");
+			System.out.println("ERROR: Bad URL, could not access Nominatim");
 		}
 		catch (IOException e) {
-			System.out.println("ERROR: Bad connection, could not access Nomatim");
+			System.out.println("ERROR: Bad connection, could not access Nominatim");
 		}
 		return null;
 	}
