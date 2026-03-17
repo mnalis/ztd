@@ -11,7 +11,7 @@
 
     <groupId>com.test.java.ztd</groupId>
     <artifactId>zombie-tower-defense</artifactId>
-    <version>1.02-SNAPSHOT</version>
+    <version>1.03</version>
     <packaging>jar</packaging>
 
     <name>Zombie Tower Defense</name>
