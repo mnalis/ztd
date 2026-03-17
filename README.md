@@ -4,12 +4,10 @@
 Zombie Tower Defense
 
 # To Play
-Currently ZTD must be built from source
-1. Clone git repository: `https://github.com/mjhart/ztd.git`
-2. Build: `mvn package`
-3. Run: `bin/zombie_tower_defense`
+1. Download `.jar` file from https://github.com/mnalis/ztd/releases
+2. Run: `java -jar zombie-tower-defense-*.jar`
 
-Java 7 and Maven 3 are required
+Java 7 and Maven 3 are required for building from source (via `mvn package`) or you can use GitHub Action to build.
 
-Please [create an issue](https://github.com/mjhart/ztd/issues/new) on github with any comments or questions.
+Please [create an issue](https://github.com/mnalis/ztd/issues/new) on github with any comments or questions.
 
