@@ -109,8 +109,11 @@ public class Map {
 		if (isStored(address)) {
 			String formatted = address.replace(" ", "_");
 			try {
-				FileInputStream inputStream =
-								new FileInputStream(new File("src/main/resources/maps/" + formatted + ".xml"));
+				String resourcePath = "/maps/" + formatted + ".xml"; // leading slash important
+				InputStream inputStream = getClass().getResourceAsStream(resourcePath);
+				if (inputStream == null) {
+				    throw new FileNotFoundException("Resource not found: " + resourcePath);
+				}
 				setW(address);
 				return inputStream;
 			} catch (FileNotFoundException e) {
