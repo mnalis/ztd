@@ -26,5 +26,5 @@ jobs:
       - name: Upload JAR
         uses: actions/upload-artifact@v4
         with:
-          name: my-jar
+          name: ztd-mn-jar
           path: target/*.jar
