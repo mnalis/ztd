@@ -247,7 +247,7 @@ public class Console2 {
 			FontMetrics fm = g.getFontMetrics();
 			int d = fm.stringWidth(blurb);
 			if (d < _width) {
-				g.drawString(blurb, x + 2, y + 5*c);
+				g.drawString(blurb, x + 2, y + 6*c);
 			}
 			else {
 				String[] strarr = blurb.split("\\s+");
