@@ -14,7 +14,7 @@ import java.util.concurrent.TimeoutException;
  * The Retriever connects with the OSM server and obtains the information necessary to make
  * the map screen for ZTD. It has two methods: getBox retrieves the xml information contained
  * within the specified box defined as lat and lon coordinates, and getFromAddress retrieves
- * xml for a particular address from an OSM service called nomatim
+ * xml for a particular address from an OSM service called nominatim
  * @author mmkaplan
  *
  */
@@ -70,8 +70,20 @@ public class Retriever {
 		System.out.println("DEBUG: trying to fetch: " + address);
 
 		try {
-			URL nomatim = new URL(address);
-			return nomatim.openStream();
+			URL url = new URL(address);
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+
+			conn.setRequestMethod("GET");
+			conn.setRequestProperty("User-Agent", "ZombieTowerDefense/1.01 (https://github.com/mnalis/ztd)");
+			conn.setConnectTimeout(10000);
+			conn.setReadTimeout(10000);
+
+			int status = conn.getResponseCode();
+			if (status != 200) {
+				throw new IOException("HTTP error code: " + status);
+			}
+
+			return conn.getInputStream();
 		}
 		catch (MalformedURLException e) {
 			System.out.println("ERROR: Bad URL, could not access Nominatim");
