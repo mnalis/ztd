@@ -74,7 +74,7 @@ public class Retriever {
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
 			conn.setRequestMethod("GET");
-			conn.setRequestProperty("User-Agent", "ZombieTowerDefense/1.01 (https://github.com/mnalis/ztd)");
+			conn.setRequestProperty("User-Agent", "ZombieTowerDefense/1.02 (https://github.com/mnalis/ztd)");
 			conn.setConnectTimeout(10000);
 			conn.setReadTimeout(10000);
 
