@@ -11,11 +11,11 @@
 
     <groupId>com.test.java.ztd</groupId>
     <artifactId>zombie-tower-defense</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.01-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Zombie Tower Defense</name>
-    <url>https://github.com/mjhart/java.ztd</url>
+    <url>https://github.com/mnalis/java.ztd</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
