@@ -67,7 +67,8 @@ public class Retriever {
 			address = address + staddarr[i] + "+";
 		}
 		address = address + staddarr[len-1] + "&format=xml";
-		
+		System.out.println("DEBUG: trying to fetch: " + address);
+
 		try {
 			URL nomatim = new URL(address);
 			return nomatim.openStream();
